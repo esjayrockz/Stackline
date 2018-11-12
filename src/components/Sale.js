@@ -2,20 +2,16 @@ import React from 'react';
 import moment from 'moment';
 import numeral from 'numeral';
 
-const Sale = ({ date, retailSales })=> (
+const Sale = ({ date, retailSales, wholesaleSales,unitsSold, retailerMargin  })=> (
     <div className="content-container">
       <div className="list-item" >
-        {/* <p>{date}</p> */}
-        <p>{numeral(retailSales).format('$0,0.00')}</p>
+        <span className="list-item">{moment(date).format('MMMM Do, YYYY')}</span>
+        <span className="list-item">{numeral(retailSales).format('$0,0.00')}</span>
+        <span className="list-item">{numeral(wholesaleSales).format('$0,0.00')}</span>
+        <span className="list-item">{unitsSold}</span>
+        <span className="list-item">{numeral(retailerMargin).format('$0,0.00')}</span>
       </div>
     </div>
 );
 
 export default Sale;
-
-//
-// <div>
-//   <h3 className="list-item__title">{description}</h3>
-//   <span className="list-item__sub-title">{moment(createdAt).format('MMMM Do, YYYY')}</span>
-// </div>
-// <h3 className="list-item__data">{numeral(amount/100).format('$0,0.00')}</h3>

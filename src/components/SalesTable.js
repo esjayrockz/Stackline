@@ -4,7 +4,14 @@ import Sale from './Sale';
 
 export const SalesTable = (props) => (
 
-    <div>
+    <div className="content-container">
+      <div className="list-header">
+        <div className="show-for-desktop">Week Ending</div>
+        <div className="show-for-desktop">Retail Sales</div>
+        <div className="show-for-desktop">Wholesale Sales</div>
+        <div className="show-for-desktop">Units Sold</div>
+        <div className="show-for-desktop">Retailer Margin</div>
+      </div>
       <div className="list-body">
       {
         (

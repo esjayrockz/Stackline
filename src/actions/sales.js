@@ -40,7 +40,6 @@ export const prepareGraphData = (data) => {
           check = moment(eachDate, 'YYYY/MM/DD');
       }
     }
-    // console.log(monthlySalesData);
 }
 
 
@@ -51,7 +50,10 @@ export const saveAllSalesData = (data) => {
   for(let week of data.sales){
     salesData.push({
       date: parseDate(week.weekEnding),
-      retailSales : week.retailSales
+      retailSales : week.retailSales,
+      wholesaleSales: week.wholesaleSales,
+      unitsSold: week.unitsSold,
+      retailerMargin: week.retailerMargin
     });
   }
   return {

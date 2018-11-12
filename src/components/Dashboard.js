@@ -20,7 +20,6 @@ export class Dashboard extends React.Component {
     componentDidUpdate() {
 
       const data = this.state.sales;
-      console.log(data);
       const graph = this.graph;
 
       let svgWidth = 700, svgHeight = 400;
